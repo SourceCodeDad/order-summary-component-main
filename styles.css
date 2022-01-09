@@ -1,0 +1,136 @@
+/* resets */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+html {
+    min-width: 375px;
+}
+
+/* colors */
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-size: 16px;
+    font-family: "Red Hat Display";
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Paleblue);
+    width: 90%;
+}
+
+p {
+    color: var(--Desaturatedblue);
+}
+
+.cardContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cardContainer p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cardContainer .topImage {
+    width: 100%;
+}
+
+.cardContainer .topImage img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#annualPlanBlock {
+    background-color: var(--Verypaleblue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+}
+
+#annualPlanBlock a {
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+#annualPlanBlock a:hover {
+    text-decoration: none;
+    color: var(--Darkblue);
+}
+
+#proceedToPayment {
+    background-color: var(--Brightblue);
+    color: white;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#proceedToPayment:hover {
+    background-color: var(--Darkblue);
+}
+
+#cancelOrderText {
+    cursor: pointer;
+}
+
+#cancelOrderText:hover {
+    color: var(--Darkblue);
+}
+ 
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 1440px) {
+    
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cardContainer {
+       margin-left: auto;
+       margin-right: auto; 
+       width: 400px;
+    }
+
+    #proceedToPayment {
+        width: 90%;
+    }
+}
