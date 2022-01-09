@@ -9,9 +9,6 @@ img {
 
 html {
     min-width: 375px;
-    background-image: url(images/pattern-background-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* colors */
@@ -27,14 +24,21 @@ html {
 body {
     font-size: 16px;
     font-family: "Red Hat Display";
-    padding: 25px;
-    
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Paleblue);
+    width: 90%;
 }
 
 p {
     color: var(--Desaturatedblue);
 }
-
 
 .cardContainer {
     background-color: white;
@@ -45,8 +49,12 @@ p {
     align-items: center;
     border-radius: 10px;
     text-align: center;
-    padding-bottom: 10px;
     margin-bottom: 10px;
+}
+
+.cardContainer p {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .cardContainer .topImage {
@@ -68,13 +76,14 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 15px;
+    padding: 25px;
     border-radius: 20px;
     width: 90%;
 }
 
 #annualPlanBlock a {
     cursor: pointer;
+    padding-right: 20px;
 }
 
 #annualPlanBlock a:hover {
@@ -111,6 +120,8 @@ p {
     
     body {
         background-image: url(images/pattern-background-desktop.svg);
+        background-size: cover;
+        background-position: center;
     }
 
     .cardContainer {
